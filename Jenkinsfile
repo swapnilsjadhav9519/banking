@@ -11,12 +11,12 @@ node {
         mavenCMD = "${mavenHome}/bin/mvn"
         docker = tool name: 'myDocker' , type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'
         dockerCMD = "${docker}/bin/docker"
-        tagName = "4.0"
+        tagName = "1.0"
     }
     stage ('code checkout'){
         try{
         echo 'pulling the code from github repo'
-        git 'https://github.com/niladrimondal/insure-me.git'
+        git 'https://github.com/niladrimondal/star-agile-banking-finance.git'
         }
         catch(Exception e){
             echo 'Exception Occur'
